@@ -68,7 +68,7 @@ protobuf==6.33.5
     #   grpcio-health-checking
     #   opentelemetry-proto
     #   proto-plus
-pyasn1==0.5.0
+pyasn1==0.6.4
     # via
     #   pyasn1-modules
     #   rsa
@@ -91,7 +91,7 @@ typing-extensions==4.15.0
     #   opentelemetry-exporter-otlp-proto-grpc
     #   opentelemetry-sdk
     #   opentelemetry-semantic-conventions
-urllib3==2.6.3
+urllib3==2.7.0
     # via requests
 wrapt==1.16.0
     # via
