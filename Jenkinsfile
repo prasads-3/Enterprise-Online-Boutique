@@ -34,7 +34,24 @@ pipeline {
         stage('Docker Push') {
             steps {
                 echo 'Pushing Docker images...'
-                sh 'make docker-push'
+
+                withCredentials([
+                    usernamePassword(
+                        credentialsId: 'DockerHubJack',
+                        usernameVariable: 'DOCKER_USER',
+                        passwordVariable: 'DOCKER_PASSWORD'
+                    )
+                ]) {
+                    sh '''
+                        echo "$DOCKER_PASSWORD" | docker login \
+                            -u "$DOCKER_USER" \
+                            --password-stdin
+
+                        make docker-push
+
+                        docker logout
+                    '''
+                }
             }
         }
     }
