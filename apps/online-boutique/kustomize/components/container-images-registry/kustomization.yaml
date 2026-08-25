@@ -37,5 +37,5 @@ images:
   newName: prasad3737/online-boutique-recommendationservice
 - name: us-central1-docker.pkg.dev/online-boutique-ci/microservices-demo/shippingservice
   newName: prasad3737/online-boutique-shippingservice
-- name: redis
-  newName: prasad3737/redis
+# - name: redis
+#   newName: prasad3737/redis
